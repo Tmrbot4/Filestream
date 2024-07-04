@@ -13,7 +13,7 @@ class Telegram:
     DATABASE_URL = str(env.get('DATABASE_URL', "mongodb+srv://fehebaw351:nHbjrujWqgqLR58H@cluster0.lekn97z.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"))
     DATABASE_NAME = env.get("DATABASE_NAME", "cluste0")
     COLLECTION_NAME = env.get('COLLECTION_NAME', 'Data')
-    UPDATES_CHANNEL = str(env.get('UPDATES_CHANNEL', "streaamdb1"))
+    UPDATES_CHANNEL = str(env.get('UPDATES_CHANNEL', "TMR_update_channel"))
     SESSION_NAME = str(env.get('SESSION_NAME', 'store05'))
     FORCE_SUB_ID = env.get('FORCE_SUB_ID', "-1001868502293")
     FORCE_SUB = env.get('FORCE_UPDATES_CHANNEL', True)
@@ -22,10 +22,10 @@ class Telegram:
     FILE_PIC = env.get('FILE_PIC', "https://graph.org/file/5bb9935be0229adf98b73.jpg")
     START_PIC = env.get('START_PIC', "https://graph.org/file/e581dec86ccfdfbdbf3b9.jpg")
     VERIFY_PIC = env.get('VERIFY_PIC', "https://graph.org/file/e581dec86ccfdfbdbf3b9.jpg")
-    MULTI_CLIENT = True
+    MULTI_CLIENT = False
     FLOG_CHANNEL = int(env.get("FLOG_CHANNEL", "-1002178270630"))   # Logs channel for file logs
     ULOG_CHANNEL = int(env.get("ULOG_CHANNEL", "-1002178270630"))   # Logs channel for user logs
-    MODE = env.get("MODE", "primary")
+    MODE = env.get("MODE", "secondary")
     SECONDARY = True if MODE.lower() == "secondary" else False
     AUTH_USERS = list(set(int(x) for x in str(env.get("AUTH_USERS", "6987799874")).split()))
 
