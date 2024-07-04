@@ -24,7 +24,7 @@ class Telegram:
     VERIFY_PIC = env.get('VERIFY_PIC', "https://graph.org/file/736e21cc0efa4d8c2a0e4.jpg")
     MULTI_CLIENT = False
     FLOG_CHANNEL = int(env.get("FLOG_CHANNEL", "-1002178270630"))   # Logs channel for file logs
-    ULOG_CHANNEL = int(env.get("ULOG_CHANNEL", "-1002178270630))   # Logs channel for user logs
+    ULOG_CHANNEL = int(env.get("ULOG_CHANNEL", "-1002178270630"))   # Logs channel for user logs
     MODE = env.get("MODE", "primary")
     SECONDARY = True if MODE.lower() == "secondary" else False
     AUTH_USERS = list(set(int(x) for x in str(env.get("AUTH_USERS", "6936727037 5791145987 6714293206")).split()))
@@ -36,6 +36,6 @@ class Server:
     HAS_SSL = str(env.get("HAS_SSL", "0").lower()) in ("1", "true", "t", "yes", "y")
     NO_PORT = str(env.get("NO_PORT", "0").lower()) in ("1", "true", "t", "yes", "y")
     FQDN = str(env.get("FQDN", "ssrfs-7ecfd11f630e.herokuapp.com"))
-    URL = "https://ssrfs-7ecfd11f630e.herokuapp.com/".format(
+    URL = "https://filestrem-3ed9fe0ee6aa.herokuapp.com/".format(
         "s" if HAS_SSL else "", FQDN, "" if NO_PORT else ":" + str(PORT)
     )
