@@ -128,7 +128,7 @@ async def update_file_id(msg_id, multi_clients):
 async def send_file(client: Client, db_id, file_id: str, message):
     file_caption = getattr(message, 'caption', None) or get_name(message)
     log_msg = await client.send_cached_media(chat_id=Telegram.FLOG_CHANNEL, file_id=file_id,
-                                             caption=f'**{file_name}**')
+                                             caption=f'**@The_Movie_Rock {file_name}**')
 
     if message.chat.type == ChatType.PRIVATE:
         await log_msg.reply_text(
