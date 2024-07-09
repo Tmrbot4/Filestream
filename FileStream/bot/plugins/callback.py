@@ -149,7 +149,7 @@ async def gen_file_menu(_id, file_list_no, update: CallbackQuery):
         MYFILES_BUTTONS = InlineKeyboardMarkup(
             [
                 [InlineKeyboardButton("ᴅᴏᴡɴʟᴏᴀᴅ", url=stream_link)],
-                [InlineKeyboardButton("ɢᴇᴛ ғɪʟᴇ", callback_data=f"sendfile_{myfile_info['_id']}"),
+                [InlineKeyboardButton("ɢᴇᴛ ғɪʟᴇ", url=f"https://t.me/TMR_update_channel"),
                  InlineKeyboardButton("ʀᴇᴠᴏᴋᴇ ғɪʟᴇ", callback_data=f"msgdelete_{myfile_info['_id']}_{file_list_no}")],
                 [InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="userfiles_{}".format(file_list_no))]
             ]
